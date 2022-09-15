@@ -1,0 +1,24 @@
+API DEVELOPMENT -PHASE 2 USING SANCTUM AUTENTICATION
+
+EXAMPLE
+
+STUDENTS ->PROJECTS
+Table->students 
+Columns ->[id,name,email,password,phone_no]
+
+Table -> projects 
+Columns ->[id,student_id,name,description,duration]
+
+APIS WE WILL CREATE FOR THIS PHASE 2
+1. STUDENT REGISTER
+2. STUDENT LOGIN
+3.STUDENT PROGILE
+4.LOGOUT
+5.PROJECT CREATE 
+6.PROJECT LIST BY STUDENT ID 
+7.GET SINGLE PROJECT DETAIL
+8. PROJECT DELETE
+
+php artisan make:migration CreateStudentsTable
+php artisan make:migration CreateProjectsTable
+
