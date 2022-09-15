@@ -18,8 +18,8 @@ use App\Http\Controllers\Api\ProjectController;
 |
 */
 
-Route::post('register', [\App\Http\Controllers\StudentController::class, 'register']);
-Route::post('login', [\App\Http\Controllers\StudentController::class, 'login']);
+Route::post('register', [StudentController::class, 'register']);
+Route::post('login', [StudentController::class, 'login']);
 
 Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::get("profile", [StudentController::class, "profile"]);
@@ -38,6 +38,6 @@ Route::group(["middleware" => ["auth:sanctum"]], function () {
 
 
 //Route::middleware('auth:sanctum')->group(function () {
- //   Route::get('user', [\App\Http\Controllers\AuthController::class, 'user']);
- //   Route::post('logout', [\App\Http\Controllers\AuthController::class, 'logout']);
+    //Route::get('user', [\App\Http\Controllers\AuthController::class, 'user']);
+   // Route::post('logout', [\App\Http\Controllers\AuthController::class, 'logout']);
 //});

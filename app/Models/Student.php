@@ -8,7 +8,7 @@ use Laravel\Sanctum\HashApiTokens;
 
 class Student extends Model
 {
-    use HasFactory, HasApiTokens;
+    use HasFactory;
 
     protected $table = "students";
 

@@ -41,6 +41,17 @@ class StudentController extends Controller
     //LOGIN API
     public function login(Request $request) // REQUEST INSTANCE
     {
+        //validation
+        $request->validate([
+            "email" => "required|email",
+            "password" => "required"
+        ]);
+        //check student 
+        $student=Student::where("email", "=", $request->email)->first();
+        //create a token 
+
+        //send response
+
     }
 
     //PROFILE API
