@@ -46,3 +46,11 @@ php artisan make:controller Api/ProjectController
 
  UPDATE MODEL
  ************************************
+
+ use Laravel\Sanctum\HashApiTokens;
+ ADD This -HasApiTokens
+
+ CONTROLLER METHODS SETINGS
+
+
+ php artisan migrate:refresh
