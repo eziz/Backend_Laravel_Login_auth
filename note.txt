@@ -22,3 +22,27 @@ APIS WE WILL CREATE FOR THIS PHASE 2
 php artisan make:migration CreateStudentsTable
 php artisan make:migration CreateProjectsTable
 
+//model must be singular
+php artisan make:model Student
+php artisan make:model Project
+
+//create API controllers
+php artisan make:controller Api/StudentController
+php artisan make:controller Api/ProjectController
+
+
+ INSTALLATION SANCTUM PACKAGE
+ *****************************
+ composer require laravel/sanctum 
+
+ PUBLISH SANCTUM CONFIG
+ **********************
+ php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+ php artisan migrate
+
+ UPDATE ROUTE SERVICE PROVIDER FILE
+ ************************************
+ UNCOMMNET THIS FILE protected $namespace = 'App\\Http\\Controllers';
+
+ UPDATE MODEL
+ ************************************
