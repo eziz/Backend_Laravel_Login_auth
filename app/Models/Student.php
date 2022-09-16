@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Sanctum\HashApiTokens;
+use Laravel\Sanctum\HasApiTokens;
 
 class Student extends Model
 {
-    use HasFactory;
+    use HasFactory, HasApiTokens;
 
     protected $table = "students";
 
@@ -18,5 +18,7 @@ class Student extends Model
         "password",
         "phone_no"
     ];
+
     public $timestamps = false;
 }
+

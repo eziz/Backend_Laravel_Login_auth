@@ -18,8 +18,8 @@ use App\Http\Controllers\Api\ProjectController;
 |
 */
 
-Route::post('register', [StudentController::class, 'register']);
-Route::post('login', [StudentController::class, 'login']);
+Route::post("register", [StudentController::class, "register"]);
+Route::post("login", [StudentController::class, "login"]);
 
 Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::get("profile", [StudentController::class, "profile"]);
